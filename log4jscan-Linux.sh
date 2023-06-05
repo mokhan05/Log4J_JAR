@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Script version: 2.3 (scans jar/war/ear/zip files)" ;
+
 if [ $# -eq 0 ]; then
 	BASEDIR="/"
 	NETDIR_SCAN=false
@@ -124,7 +126,6 @@ handle_jar()
 
 log4j()
 {
-    echo "Script version: 2.3 (scans jar/war/ear/zip files)" ;
     echo "Scanning started.." > /usr/local/qualys/cloud-agent/log4j_findings.stderr ;
     date >> /usr/local/qualys/cloud-agent/log4j_findings.stderr ;    
     id=`id`;
