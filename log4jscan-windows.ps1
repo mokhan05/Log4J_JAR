@@ -49,7 +49,7 @@ elseif ($Arch -eq 'amd64') {
 
 # Read log4j_f.out file
 try {
-    Get-Content -Path C:\ProgramData\Qualys\log4j_findings.outdsd -ErrorAction Stop
+    Get-Content -Path C:\ProgramData\Qualys\log4j_findings.out -ErrorAction Stop
 } catch {
     if ($_.Exception.GetType().Name -eq "ItemNotFoundException") {
         Write-Host "log4j_findings.out file not found."

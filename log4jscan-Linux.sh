@@ -194,7 +194,8 @@ else
     fi;
 fi;
 
-cat /usr/local/qualys/cloud-agent/log4j_findings.stdout
 cat /usr/local/qualys/cloud-agent/log4j_findings.stderr
+echo "------------------------------------------------------------------------"
+cat /usr/local/qualys/cloud-agent/log4j_findings.stdout
 
 rm -rf /tmp/log4j_for_extract 2> /dev/null
